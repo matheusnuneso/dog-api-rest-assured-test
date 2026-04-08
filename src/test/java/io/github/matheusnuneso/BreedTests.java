@@ -33,7 +33,7 @@ public class BreedTests extends BaseTest {
             .assertThat()
                 .statusCode(200)
                 .body("status", is("success"))
-                .body("message", matchesPattern("https?://.*"));
+                .body("message", matchesPattern("^https://images\\.dog\\.ceo/breeds.*"));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class BreedTests extends BaseTest {
             .assertThat()
             .statusCode(200)
             .body("status", is("success"))
-            .body("message", everyItem(matchesPattern("https?://.*")));
+            .body("message", everyItem(matchesPattern("^https://images\\.dog\\.ceo/breeds.*")));
     }
 
     @Test()
