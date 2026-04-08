@@ -19,15 +19,19 @@ Neste projeto, foi utilizado o gerenciador de pacotes [Maven](https://maven.apac
     ```sh
     git clone https://github.com/matheusnuneso/dog-api-rest-assured-test.git
     ```
-2. Na raiz do projeto, instale as dependências.
+2. Vá para a raiz do projeto   
+   ```sh
+    cd dog-api-rest-assured-test 
+    ```
+3. Instale as dependências.
     ```sh
     mvn clean install
     ```
-3. Execute os testes.
+4. Execute os testes.
    ```sh
     mvn test
     ```
-4. Execute o servidor do allure para ver o relatório da execução.
+5. Execute o servidor do allure para ver o relatório da execução.
    ```sh
     mvn allure:serve
     ```
