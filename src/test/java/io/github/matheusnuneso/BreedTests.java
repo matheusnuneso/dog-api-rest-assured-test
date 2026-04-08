@@ -3,11 +3,13 @@ package io.github.matheusnuneso;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
+import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 
 public class BreedTests extends BaseTest {
 
     @Test
+    @Description("Should return all breeds successfully (/list/all)")
     public void shouldReturnAllBreedsSuccessfully(){
         given()
             .spec(requestSpec())
@@ -21,6 +23,7 @@ public class BreedTests extends BaseTest {
     }
 
     @Test
+    @Description("Should return a random img successfully (/image/random)")
     public void shouldReturnRandomImageSuccessfully(){
         given()
             .spec(requestSpec())
@@ -34,6 +37,7 @@ public class BreedTests extends BaseTest {
     }
 
     @Test
+    @Description("Should return all images when a valid breed is provided (/{breed}/images)")
     public void shouldReturnAllImagesWhenValidBreedIsProvided(){
         String validBreed = "bulldog";
         String path = "/breed/"+ validBreed +"/images";
@@ -50,6 +54,7 @@ public class BreedTests extends BaseTest {
     }
 
     @Test()
+    @Description("Should return 404 when invalid breed is provided (/{breed}/images)")
     public void shouldReturnNotFoundWhenInvalidBreedIsProvided(){
         String invalidBreed = "invalidBreed";
         String path = "/breed/"+ invalidBreed +"/images";

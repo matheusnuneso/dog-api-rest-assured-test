@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Restful Breed Test Suite">
+    <test name="Restful Breed tests">
+        <classes>
+            <class name="io.github.matheusnuneso.BreedTests">
+                <methods>
+                    <include name="shouldReturnAllBreedsSuccessfully"/>
+                    <include name="shouldReturnRandomImageSuccessfully"/>
+                    <include name="shouldReturnAllImagesWhenValidBreedIsProvided"/>
+                    <include name="shouldReturnNotFoundWhenInvalidBreedIsProvided"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
